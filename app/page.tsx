@@ -157,7 +157,7 @@ export default function Home() {
       </section>
 
       {/* Pricing Preview Section */}
-      <section className="py-20 bg-slate-900/50 backdrop-blur-sm relative z-10">
+      <section className="py-20 bg-slate-900/50 backdrop-blur-sm relative z-10 overflow-visible">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4 neon-text">
@@ -168,7 +168,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto items-start pt-6">
             {/* Basic Plan */}
             <div className="holo-card rounded-lg p-8 glow-border cyber-border">
               <div className="text-center mb-6">
@@ -211,13 +211,14 @@ export default function Home() {
             </div>
 
             {/* Premium Plan */}
-            <div className="holo-card rounded-lg p-8 relative transform scale-105 shadow-xl glow-border cyber-border">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <span className="neon-button px-4 py-1 rounded-full text-sm font-bold text-white">
+            <div className="relative">
+              <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 z-50">
+                <span className="neon-button px-4 py-2 rounded-full text-sm font-bold text-white shadow-lg whitespace-nowrap">
                   POPULAR
                 </span>
               </div>
-              <div className="text-center mb-6">
+              <div className="holo-card rounded-lg p-8 transform scale-105 shadow-xl glow-border cyber-border">
+                <div className="text-center mb-6">
                 <h3 className="text-2xl font-bold text-white mb-2">Premium</h3>
                 <div className="text-4xl font-bold gradient-text mb-2">$9<span className="text-lg text-slate-300">/mo</span></div>
                 <p className="text-slate-300 text-sm terminal-text">// For serious grinders</p>
@@ -254,6 +255,7 @@ export default function Home() {
               >
                 Get Premium
               </Link>
+            </div>
             </div>
 
             {/* Pro Plan */}
