@@ -71,11 +71,11 @@ export default function HistoryPage() {
           {/* Header */}
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-3xl font-bold text-white">Session History</h1>
-              <p className="text-slate-400 mt-1">
-                {user.plan === 'basic' && 'Showing last 5 sessions (Basic plan limit)'}
-                {user.plan === 'premium' && 'All your interview sessions'}
-                {user.plan === 'pro' && 'Complete session history with advanced insights'}
+              <h1 className="text-3xl font-bold text-white neon-text">Session History</h1>
+              <p className="text-slate-400 mt-1 terminal-text">
+                {user.plan === 'basic' && '// Showing last 5 sessions (Basic plan limit)'}
+                {user.plan === 'premium' && '// All your interview sessions'}
+                {user.plan === 'pro' && '// Complete session history with advanced insights'}
               </p>
             </div>
 

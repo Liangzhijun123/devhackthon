@@ -16,43 +16,43 @@ export default function AnalyticsPage() {
       <ProtectedRoute>
         <AppLayout>
           <div className="space-y-6">
-            <h1 className="text-3xl font-bold text-white">Performance Analytics</h1>
+            <h1 className="text-3xl font-bold text-white neon-text">Performance Analytics</h1>
             
             {/* Blurred Preview */}
             <div className="relative">
               <div className="filter blur-sm pointer-events-none select-none">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-                  <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6">
-                    <div className="text-sm text-slate-400">Sessions This Week</div>
-                    <div className="text-4xl font-bold text-white mt-2">12</div>
+                  <div className="holo-card rounded-lg p-6 glow-border">
+                    <div className="text-sm text-slate-400 terminal-text">// Sessions This Week</div>
+                    <div className="text-4xl font-bold gradient-text mt-2">12</div>
                   </div>
-                  <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6">
-                    <div className="text-sm text-slate-400">Average Rating</div>
-                    <div className="text-4xl font-bold text-white mt-2">4.2</div>
+                  <div className="holo-card rounded-lg p-6 glow-border">
+                    <div className="text-sm text-slate-400 terminal-text">// Average Rating</div>
+                    <div className="text-4xl font-bold gradient-text mt-2">4.2</div>
                   </div>
-                  <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6">
-                    <div className="text-sm text-slate-400">Completion Rate</div>
-                    <div className="text-4xl font-bold text-white mt-2">87%</div>
+                  <div className="holo-card rounded-lg p-6 glow-border">
+                    <div className="text-sm text-slate-400 terminal-text">// Completion Rate</div>
+                    <div className="text-4xl font-bold gradient-text mt-2">87%</div>
                   </div>
                 </div>
-                <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 h-64"></div>
+                <div className="holo-card rounded-lg p-6 h-64 glow-border"></div>
               </div>
 
               {/* Upgrade Overlay */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="bg-slate-900/95 border-2 border-blue-500 rounded-xl p-8 max-w-md text-center backdrop-blur-sm">
-                  <div className="w-16 h-16 bg-blue-900/50 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-blue-500">
+                <div className="holo-card rounded-xl p-8 max-w-md text-center glow-border cyber-border">
+                  <div className="w-16 h-16 holo-card rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-blue-500">
                     <svg className="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                     </svg>
                   </div>
-                  <h2 className="text-2xl font-bold text-white mb-2">Unlock Analytics</h2>
-                  <p className="text-slate-300 mb-6">
+                  <h2 className="text-2xl font-bold text-white mb-2 neon-text">Unlock Analytics</h2>
+                  <p className="text-slate-200 mb-6">
                     Upgrade to Premium to track your performance, identify weak areas, and see your progress over time.
                   </p>
                   <Link
                     href="/pricing"
-                    className="inline-block px-8 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold rounded-lg transition-all"
+                    className="inline-block neon-button px-8 py-3 text-white font-semibold rounded-lg transition-all"
                   >
                     Upgrade to Premium
                   </Link>
@@ -72,9 +72,9 @@ export default function AnalyticsPage() {
         <div className="space-y-6">
           {/* Header */}
           <div>
-            <h1 className="text-3xl font-bold text-white">Performance Analytics</h1>
-            <p className="text-slate-400 mt-1">
-              {user.plan === 'premium' ? 'Track your progress and performance' : 'Advanced insights and readiness metrics'}
+            <h1 className="text-3xl font-bold text-white neon-text">Performance Analytics</h1>
+            <p className="text-slate-400 mt-1 terminal-text">
+              {user.plan === 'premium' ? '// Track your progress and performance' : '// Advanced insights and readiness metrics'}
             </p>
           </div>
 

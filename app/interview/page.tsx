@@ -99,28 +99,28 @@ export default function InterviewPage() {
         {/* Zoom-like Interview Interface */}
         <div className="h-[calc(100vh-120px)] flex flex-col">
           {/* Top Bar - Timer and Controls */}
-          <div className="bg-slate-900 border-b border-slate-700 px-6 py-4 flex items-center justify-between">
+          <div className="holo-card border-b border-slate-700 px-6 py-4 flex items-center justify-between glow-border">
             <div className="flex items-center gap-6">
               {/* Timer */}
               <div className="flex items-center gap-3">
-                <div className={`w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center border-2 ${
-                  timeRemaining <= 120 ? 'border-red-500 animate-pulse' : 'border-blue-500'
+                <div className={`w-12 h-12 holo-card rounded-full flex items-center justify-center border-2 ${
+                  timeRemaining <= 120 ? 'border-red-500 animate-pulse neon-text' : 'border-blue-500'
                 }`}>
                   <svg className={`w-6 h-6 ${timeRemaining <= 120 ? 'text-red-400' : 'text-blue-400'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
                 <div>
-                  <div className={`text-2xl font-bold font-mono ${timeRemaining <= 120 ? 'text-red-400' : 'text-white'}`}>
+                  <div className={`text-2xl font-bold font-mono ${timeRemaining <= 120 ? 'text-red-400 neon-text' : 'gradient-text'}`}>
                     {formatTime(timeRemaining)}
                   </div>
-                  <div className="text-xs text-slate-400">Time Remaining</div>
+                  <div className="text-xs text-slate-400 terminal-text">// Time Remaining</div>
                 </div>
               </div>
 
               {/* Question Info */}
               <div className="border-l border-slate-700 pl-6">
-                <div className="text-sm text-slate-400">Current Question</div>
+                <div className="text-sm text-slate-400 terminal-text">// Current Question</div>
                 <div className="text-white font-medium">Two Sum Problem</div>
               </div>
             </div>
@@ -133,8 +133,8 @@ export default function InterviewPage() {
                   onClick={() => setPressureMode(!pressureMode)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all ${
                     pressureMode
-                      ? 'bg-orange-600 text-white'
-                      : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+                      ? 'neon-button text-white'
+                      : 'holo-card text-slate-200 glow-border'
                   }`}
                 >
                   <div className="flex items-center gap-2">
@@ -149,7 +149,7 @@ export default function InterviewPage() {
               {/* End Session Button */}
               <button 
                 onClick={handleEndSession}
-                className="px-6 py-2 bg-red-600 hover:bg-red-700 text-white font-medium rounded-lg transition-all"
+                className="px-6 py-2 bg-red-600 hover:bg-red-700 text-white font-medium rounded-lg transition-all neon-text"
               >
                 End Session
               </button>

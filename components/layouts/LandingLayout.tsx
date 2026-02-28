@@ -7,6 +7,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import ClickSpark from '@/components/ClickSpark';
 
 interface LandingLayoutProps {
   children: React.ReactNode;
@@ -14,7 +15,14 @@ interface LandingLayoutProps {
 
 export function LandingLayout({ children }: LandingLayoutProps) {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 flex flex-col">
+    <ClickSpark
+      sparkColor="#3b82f6"
+      sparkSize={12}
+      sparkRadius={20}
+      sparkCount={8}
+      duration={500}
+    >
+      <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 flex flex-col">
       {/* Header */}
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-slate-900/70 border-b border-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -75,5 +83,6 @@ export function LandingLayout({ children }: LandingLayoutProps) {
         </div>
       </footer>
     </div>
+    </ClickSpark>
   );
 }

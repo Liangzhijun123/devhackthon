@@ -58,8 +58,8 @@ export function QuickActions() {
   }
 
   return (
-    <div className="bg-slate-800/50 rounded-lg shadow-lg border border-slate-700 p-6 backdrop-blur-sm">
-      <h2 className="text-lg font-semibold text-slate-100 mb-4">Quick Actions</h2>
+    <div className="holo-card rounded-lg shadow-lg p-6 glow-border cyber-border">
+      <h2 className="text-lg font-semibold text-slate-100 mb-4 terminal-text">&gt; Quick Actions</h2>
       
       <div className="space-y-4">
         {/* Primary Action: Start Mock Interview */}
@@ -69,7 +69,7 @@ export function QuickActions() {
             disabled={!weeklyLimitStatus.canStart}
             className={`w-full flex items-center justify-center px-6 py-4 rounded-lg font-semibold text-lg transition-all duration-200 ${
               weeklyLimitStatus.canStart
-                ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:from-blue-700 hover:to-indigo-700 shadow-lg hover:shadow-xl'
+                ? 'neon-button text-white'
                 : 'bg-slate-700 text-slate-500 cursor-not-allowed'
             }`}
           >
@@ -99,10 +99,10 @@ export function QuickActions() {
           {/* Weekly limit indicator for Basic users */}
           {user.plan === 'basic' && weeklyLimitStatus.limit && (
             <div className="mt-2 text-center">
-              <p className="text-sm text-slate-400">
+              <p className="text-sm text-slate-400 terminal-text">
                 {weeklyLimitStatus.canStart ? (
                   <>
-                    {weeklyLimitStatus.sessionsThisWeek} of {weeklyLimitStatus.limit} interviews used this week
+                    // {weeklyLimitStatus.sessionsThisWeek} of {weeklyLimitStatus.limit} interviews used this week
                   </>
                 ) : (
                   <span className="text-orange-400 font-medium">
@@ -119,7 +119,7 @@ export function QuickActions() {
           {/* View History */}
           <Link
             href="/history"
-            className="flex items-center justify-center px-4 py-3 bg-slate-700/50 hover:bg-slate-700 text-slate-200 font-medium rounded-lg border border-slate-600 transition-colors duration-200"
+            className="flex items-center justify-center px-4 py-3 holo-card text-slate-200 font-medium rounded-lg glow-border transition-colors duration-200"
           >
             <svg
               className="w-5 h-5 mr-2"
@@ -141,7 +141,7 @@ export function QuickActions() {
           {/* View Analytics */}
           <Link
             href="/analytics"
-            className="flex items-center justify-center px-4 py-3 bg-slate-700/50 hover:bg-slate-700 text-slate-200 font-medium rounded-lg border border-slate-600 transition-colors duration-200"
+            className="flex items-center justify-center px-4 py-3 holo-card text-slate-200 font-medium rounded-lg glow-border transition-colors duration-200"
           >
             <svg
               className="w-5 h-5 mr-2"
