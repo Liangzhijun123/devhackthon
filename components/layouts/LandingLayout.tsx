@@ -69,7 +69,7 @@ export function LandingLayout({ children }: LandingLayoutProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex justify-between items-center">
             <p className="text-slate-400 text-sm">
-              © 2024 Interview Buddy. All rights reserved.
+              © 2026 Interview Buddy. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <Link href="/pricing" className="text-slate-400 hover:text-slate-300 text-sm transition-colors">
